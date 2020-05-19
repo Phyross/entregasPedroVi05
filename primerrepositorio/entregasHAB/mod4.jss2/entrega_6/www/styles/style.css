@@ -1,0 +1,214 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #1E1E24;
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;
+}
+#jumbotron {
+    background-image: url(/images/header-image.jpg);
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ruda', sans-serif;
+}
+h1 {
+    color: #fff;
+    font-size: 70px;
+    font-weight: 900;
+    margin: 0px;
+    padding-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+h2 {
+    color: #fff;
+    margin: 0px;
+    text-align: left;
+}
+h3 {
+    color: #d7263d;
+    font-size: 32px;
+    margin: 0px;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+h4{
+  
+    color: #fff;
+    font-size: 18px;
+    border: 4px solid  #fff;
+    display: block;
+    text-align: left;
+    width: 100%;
+
+
+}
+p {
+    color: rgba(255,255,255,0.75);
+    margin: 0px;
+    text-align: left;
+}
+.hotels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+.hotel {
+    border: 1px solid #ffffff;
+    margin: 10px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    transition:2s;
+
+}
+
+
+.hotel:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+    background:black;
+    
+        
+}
+.hotel-img {
+    display: block;
+    margin-top: 20px;
+}
+.hotel-description {
+    display: inline-block;
+    padding: 20px;
+    flex: 1 1 auto;
+}
+.book {
+    margin-top: 20px;
+    width: 100%;
+    
+}
+
+a {
+    background-color: #D7263D;
+    color: #fff;
+    display: block;
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 16px;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover{
+
+    background-color:rgb(17, 148, 28);
+}
+ul {
+    padding: 0px;
+    margin: 10px 0px;
+}
+li {
+    margin: 0px;
+    list-style: none;
+    
+    
+ 
+}
+
+.tituloaside{
+    text-align: center;
+    padding: 10px;
+    border: 4px solid brown;
+    display: block;
+    background-color: seagreen;
+    width: 90%;
+
+}
+
+#colophon {
+    background-color: #D7263D;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+#colophon h2 {
+    text-align: center;
+}
+
+aside{
+display: flex;
+
+
+flex-wrap: wrap;
+border: 2px solid brown;
+width: 20%;
+padding: 20px;
+margin-top: 30px;
+float: right;
+font-style: italic;
+background-color: darkgreen;
+size: 300px;
+
+
+
+
+}
+
+.list{
+    font-style: oblique;
+    color:brown;
+    margin: 0px;
+    position: relative;
+    text-align: right;
+    
+
+}
+
+.delete {
+    
+    background-color:rgb(160, 26, 26);
+    color: white;
+    cursor: pointer;
+    padding: 0px 5px;
+    margin-left: 40px;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+.delete:hover{
+    background-color:rgb(221, 50, 50);
+}
+
+.tarjet{
+    height: 100px;
+    display: block;
+    }
+
+.tarjet:hover {
+    transform: scale(1.2);
+}
+
+.eliminar{
+    background-color:red;
+    font-display: block;
+    padding: 20px;
+    margin-left:160px;
+    border: 2px solid brown;
+    margin-top: 30px;
+    
+}
+
