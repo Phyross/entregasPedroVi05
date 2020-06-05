@@ -4,12 +4,60 @@ const botons = document.querySelectorAll('.book')
 
 const list= document.getElementById('list')
 
-
-
-
 const botEliminar=document.querySelector('.eliminar')
-const listaMatter=document.getElementById('listaMatter')
 
+const li = document.createElement('li')
+ list.appendChild(li)
+
+const imprimirTarjeta= HotelCard=>{
+ 
+    const card=document.createElement('div')
+    card.id = 'cart-card-'
+    card.className = 'cart-card'
+    card.innerHTML=`
+      <img src="${HotelCard.imagenH}"  imagen">
+      <section>
+        <h4>${HotelCard.nombreH}</h4>
+        </section>` 
+   
+    li.appendChild(card)
+
+    const button = document.createElement('button')
+    button.classList = 'delete'
+    button.textContent = 'Eliminar'
+    card.appendChild(button)
+      
+}
+
+
+const imprimirTarjetat= HotelCard=>{
+    const div=document.createElement('div')
+    div.classList='divTarjeta'
+    list.appendChild(div)
+    const imagen=document.createElement('img')
+    imagen.src=HotelCard.imagenH
+    imagen.classList = 'tarjet'
+    const section=document.createElement('section')
+    section.classList='divTarjeta'
+    const nombre= document.createElement('h4')
+    nombre.textContent=HotelCard.nombreH
+
+    div.appendChild(imagen)
+    div.appendChild(section)
+    section.appendChild(nombre)
+}
+    
+
+const CrearTarjeta= rutaArticulo=>{
+    const HotelCard={
+        nombreH:rutaArticulo.querySelector('h2').innerText,
+        imagenH:rutaArticulo.querySelector('img').src,
+        precioH:rutaArticulo.querySelector('h3').innerText  
+    }
+    console.log(HotelCard)
+    imprimirTarjeta(HotelCard)
+0
+}
 
 const enviarMensaje= e =>{
     e.preventDefault()
@@ -18,12 +66,15 @@ const enviarMensaje= e =>{
     const imagenHotel=rutaArticulo.querySelector('img').src
     const precioHotel=rutaArticulo.querySelector('h3').innerText  
 
-   console.log(imagenHotel)
-    
+    CrearTarjeta(rutaArticulo)
+
+   console.log(imagenHotel)   
    
     console.log(rutaArticulo)
     console.log(list)
-    const li = document.createElement('li')
+
+}
+    /*const li = document.createElement('li')
     const nombre=document.createElement('h4')
     nombre.textContent=nombreHotel
     const precio = document.createElement('h2')
@@ -48,7 +99,7 @@ const enviarMensaje= e =>{
     button.textContent = 'Eliminar'
     li.appendChild(button)
 
-}
+}*/
 
 const borraElemento = e => {
    if (e.target.classList.contains('delete')) {
@@ -59,9 +110,9 @@ const borraElemento = e => {
 
  const Eliminar = e => {
      console.log('Elkiminar')
-     while (list.firstChild) {
+     while (li.firstChild) {
         //The list is LIVE so it will re-index each call
-        list.removeChild(list.firstChild);
+        li.removeChild(li.firstChild);
     }
      
    

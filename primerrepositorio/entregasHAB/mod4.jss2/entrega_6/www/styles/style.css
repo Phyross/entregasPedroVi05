@@ -43,12 +43,12 @@ h3 {
 h4{
   
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     border: 4px solid  #fff;
     display: block;
-    text-align: left;
+    text-align: center;
     width: 100%;
-
+  
 
 }
 p {
@@ -151,7 +151,7 @@ li {
 
 aside{
 display: flex;
-
+width: 100%;
 
 flex-wrap: wrap;
 border: 2px solid brown;
@@ -174,8 +174,8 @@ size: 300px;
     margin: 0px;
     position: relative;
     text-align: right;
-    
-
+    display: flex;
+   
 }
 
 .delete {
@@ -195,7 +195,9 @@ size: 300px;
 
 .tarjet{
     height: 100px;
-    display: block;
+    display: flex;
+    padding-left: 1px;
+    
     }
 
 .tarjet:hover {
@@ -210,5 +212,45 @@ size: 300px;
     border: 2px solid brown;
     margin-top: 30px;
     
+}
+
+#cart {
+ 
+}
+.list-card {
+    padding: 30px 10px;
+}
+.cart-card {
+    color: white;
+    display: flex;
+    align-items: center;
+    border: 1px solid silver;
+    margin-bottom: 20px;
+    background-color: #36303d;
+}
+.cart-card img {
+    color: white;
+    width: 140px;
+}
+
+.cart-card section {
+    padding: 10px;
+}
+.cart-card h4 {
+    margin: 0px;
+}
+.delete-card {
+    background-color: #d7263d;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 2px 10px;
+}
+#delete-cart {
+    background-color: #d7263d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 200px;
 }
 
